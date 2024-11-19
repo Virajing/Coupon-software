@@ -1,0 +1,23 @@
+[
+    {
+      "registration_number": "REG12345",
+      "DOB": "password123"
+    },
+    {
+      "registration_number": "REG67890",
+      "DOB": "securePass456"
+    },
+    {
+      "registration_number": "REG11223",
+      "DOB": "mySecret789"
+    },
+    {
+      "registration_number": "REG44556",
+      "DOB": "passWord999"
+    },
+    {
+      "registration_number": "REG99887",
+      "DOB": "safePass321"
+    }
+  ]
+  
