@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucky Coupon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.js"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+  <div class="text-center">
+    <h1 class="text-3xl font-bold mb-6">Get Your Lucky Coupon!</h1>
+    <button id="getCouponButton" class="px-6 py-3 bg-blue-500 text-white font-bold rounded hover:bg-blue-700">
+      Get Coupon
+    </button>
+    <button id="backToHomeButton" class="hidden mt-4 px-6 py-3 bg-green-500 text-white font-bold rounded hover:bg-green-700">
+      Back to Home
+    </button>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-80">
+      <div id="popupContent" class="text-center">
+        <h2 id="giftName" class="text-2xl font-bold mb-4"></h2>
+        <img id="giftImage" class="mx-auto mb-4 w-32 h-32" src="" alt="Gift">
+        <p id="couponCode" class="text-lg text-gray-600"></p>
+      </div>
+      <button id="closePopup" class="mt-4 px-4 py-2 bg-red-500 text-white font-bold rounded hover:bg-red-700">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // List of gifts
+    const items = [
+      { name: "Smartphone", image: "smartphone.jpg", coupon: "SMART10" },
+      { name: "Headphones", image: "headphones.jpg", coupon: "HEAD20" },
+      { name: "Gift Card", image: "giftcard.jpg", coupon: "CARD30" },
+      { name: "Watch", image: "watch.jpg", coupon: "WATCH40" }
+    ];
+
+    const getCouponButton = document.getElementById("getCouponButton");
+    const backToHomeButton = document.getElementById("backToHomeButton");
+    const popup = document.getElementById("popup");
+    const giftName = document.getElementById("giftName");
+    const giftImage = document.getElementById("giftImage");
+    const couponCode = document.getElementById("couponCode");
+    const closePopup = document.getElementById("closePopup");
+
+    // Get Coupon button click event
+    getCouponButton.addEventListener("click", () => {
+      // Select a random gift
+      const randomGift = items[Math.floor(Math.random() * items.length)];
+
+      // Update popup content
+      giftName.textContent = randomGift.name;
+      giftImage.src = randomGift.image;
+      couponCode.textContent = `Coupon Code: ${randomGift.coupon}`;
+
+      // Show popup
+      popup.classList.remove("hidden");
+
+      // Disable Get Coupon button after it is clicked
+      getCouponButton.disabled = true;
+      getCouponButton.classList.add("opacity-50"); // Optional: Add visual effect for disabled button
+
+      // Show the "Back to Home" button
+      backToHomeButton.classList.remove("hidden");
+    });
+
+    // Close popup
+    closePopup.addEventListener("click", () => {
+      // Close popup
+      popup.classList.add("hidden");
+    });
+
+    // Back to Home button click event
+    backToHomeButton.addEventListener("click", () => {
+      // Redirect to home page (adjust the URL as needed)
+      window.location.href = '/';
+    });
+  </script>
+</body>
+</html>
