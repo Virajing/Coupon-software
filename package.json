@@ -10,11 +10,17 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+<<<<<<< HEAD
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
     "mongod": "^2.0.0",
+=======
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+>>>>>>> 36f576dcaab08e56c21f73781b10a3a9e99ac19f
     "mongoose": "^8.8.1",
     "nodemon": "^3.1.7"
   }

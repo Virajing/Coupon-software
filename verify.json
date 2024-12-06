@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
     {
       "registration_number": "REG12345",
@@ -20,4 +21,28 @@
       "DOB": "safePass321"
     }
   ]
+=======
+[
+    {
+      "registration_number": "REG12345",
+      "DOB": "password123"
+    },
+    {
+      "registration_number": "REG67890",
+      "DOB": "securePass456"
+    },
+    {
+      "registration_number": "REG11223",
+      "DOB": "mySecret789"
+    },
+    {
+      "registration_number": "REG44556",
+      "DOB": "passWord999"
+    },
+    {
+      "registration_number": "REG99887",
+      "DOB": "safePass321"
+    }
+  ]
+>>>>>>> 36f576dcaab08e56c21f73781b10a3a9e99ac19f
   
